@@ -6,7 +6,7 @@ import {
 
 export async function getMotorcycles(req, res) {
   try {
-    const motorcycle = await getAllMotorcycles();
+    const motorcycle = await getAllMotorcycles(req.query);
 
     res.json(motorcycle);
   } catch (err) {
