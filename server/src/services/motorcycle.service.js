@@ -26,4 +26,6 @@ export async function getCategories() {
       category: "asc",
     },
   });
+
+  return categories.map((item) => item.category);
 }
