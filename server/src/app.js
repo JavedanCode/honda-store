@@ -10,8 +10,6 @@ app.use(express.json());
 
 app.use("/api/motorcycles", motorcycleRoutes);
 
-app.use("/images", express.static("src/public/images"));
-
 app.get("/", (req, res) => {
   res.json({ message: "Honda Store API is running" });
 });
