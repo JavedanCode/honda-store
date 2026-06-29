@@ -1,9 +1,25 @@
 import prisma from "../lib/prisma.js";
 
-export async function getAllMotorcycles() {
-  return await prisma.motorcycle.findMany({
+export async function getAllMotorcycles(query) {
+  const { category, search, sort = "name", order = "asc" } = query;
+
+  const where = {};
+
+  if (category) {
+    where.category = category;
+  }
+
+  if (search) {
+    where.name = {
+      contains: search,
+      mode: "insensitive",
+    };
+  }
+
+  return prisma.motorcycle.findMany({
+    where,
     orderBy: {
-      name: "asc",
+      [sort]: order,
     },
   });
 }
