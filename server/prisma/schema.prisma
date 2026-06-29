@@ -1,0 +1,44 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Motorcycle {
+  id            Int      @id @default(autoincrement())
+
+  name          String
+  slug          String   @unique
+
+  year          Int
+  category      String
+
+  description   String
+
+  price         Float
+
+  engineType        String
+  displacement  Int
+
+  horsepower    Int?
+  torque        Float?
+
+  transmission  String
+  cooling       String
+
+  weight        Int?
+  seatHeight    Int?
+  fuelCapacity  Float?
+  topSpeed      Int?
+
+  stock         Int      @default(10)
+
+  featured      Boolean  @default(false)
+
+  imagePath         String
+
+  createdAt     DateTime @default(now())
+}
