@@ -8,11 +8,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.use("/api/motorcycles", motorcycleRoutes);
+
 app.get("/", (req, res) => {
   res.json({ message: "Honda Store API is running" });
 });
-
-app.use("/motorcycles", motorcycleRoutes);
 
 const PORT = 3000;
 
