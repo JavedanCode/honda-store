@@ -7,3 +7,11 @@ export async function getAllMotorcycles() {
     },
   });
 }
+
+export async function getMotorcycleBySlug(slug) {
+  return await prisma.motorcycle.findUnique({
+    where: {
+      slug,
+    },
+  });
+}
