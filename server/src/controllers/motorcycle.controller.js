@@ -1,4 +1,4 @@
-import { getAllMotorcycles } from "../services/motorcycle.service";
+import { getAllMotorcycles } from "../services/motorcycle.service.js";
 
 export async function getMotorcycles(req, res) {
   try {
