@@ -1,4 +1,8 @@
-import { getAllMotorcycles } from "../services/motorcycle.service.js";
+import {
+  getAllMotorcycles,
+  getMotorcycleBySlug,
+  getCategories,
+} from "../services/motorcycle.service.js";
 
 export async function getMotorcycles(req, res) {
   try {
@@ -7,6 +11,25 @@ export async function getMotorcycles(req, res) {
     res.json(motorcycle);
   } catch (err) {
     console.log(err);
+    res.status(500).json({
+      message: "Internal Server Error",
+    });
+  }
+}
+
+export async function getMotorcycle(req, res) {
+  try {
+    const motorcycle = await getMotorcycleBySlug(req.params.slug);
+
+    if (!motorcycle) {
+      return res.status(404).json({
+        message: "Motorcycle not found",
+      });
+    }
+    res.json(motorcycle);
+  } catch (err) {
+    console.error(err);
+
     res.status(500).json({
       message: "Internal Server Error",
     });
