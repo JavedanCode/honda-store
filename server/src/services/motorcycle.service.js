@@ -15,3 +15,15 @@ export async function getMotorcycleBySlug(slug) {
     },
   });
 }
+
+export async function getCategories() {
+  const categories = await prisma.motorcycle.findMany({
+    select: {
+      category: true,
+    },
+    distinct: ["category"],
+    orderBy: {
+      category: "asc",
+    },
+  });
+}
