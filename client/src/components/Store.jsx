@@ -7,7 +7,7 @@ export default function Store() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [sort, setSort] = useState("name");
 
-  useEffect(async () => {
+  useEffect(() => {
     async function loadMotorcycles() {
       const bikes = await getMotorcycles({
         search,
@@ -19,4 +19,12 @@ export default function Store() {
 
     loadMotorcycles();
   }, [search, selectedCategory, sort]);
+
+  useEffect(() => {
+    async function loadCategories() {
+      setCategories(await getCategories());
+    }
+
+    loadCategories();
+  }, []);
 }
