@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { getMotorcycles, getCategories } from "../api/motorcycleApi";
+import Card from "./Card";
 export default function Store() {
   const [motorcycles, setMotorcycles] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -27,4 +28,26 @@ export default function Store() {
 
     loadCategories();
   }, []);
+
+  function handleClick() {
+    //God Help me
+    return;
+  }
+
+  return (
+    <div className="store-container">
+      <h2 className="store-heading">Current Offers</h2>
+      <div className="bike-grid">
+        {motorcycles.map((motorcycle) => {
+          return (
+            <Card
+              key={motorcycle.slug}
+              onClick={handleClick}
+              motorcycle={motorcycle}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
 }
