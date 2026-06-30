@@ -43,7 +43,7 @@ export async function getMotorcycle(slug) {
 }
 
 export async function getCategories() {
-  const response = await fetch(`${API_URL}/categories`);
+  const response = await fetch(`${API_URL}/motorcycles/categories`);
 
   if (!response.ok) {
     throw new Error("Failed to fetch categories");
