@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <>
       <header>
-        <img src={hondaLogo} alt="Honda" />
+        <img src={hondaLogo} alt="Honda" width={200} />
         <nav>
           <ul>
             <li>
