@@ -1,13 +1,19 @@
+import styles from "../styles/Card.module.css";
+
 export default function Card({ onClick, motorcycle }) {
   return (
-    <div className="bike-cards" onClick={onClick}>
+    <article className={styles.card} onClick={onClick}>
       <img
-        width={300}
+        className={styles.cardImage}
         src={`http://localhost:3000${motorcycle.imagePath}`}
         alt={motorcycle.name}
       />
-      <h3 className="bike-names">{motorcycle.name}</h3>
-      <p className="bike-card-price">${motorcycle.price}</p>
-    </div>
+
+      <div className={styles.cardContent}>
+        <h3 className={styles.cardName}>{motorcycle.name}</h3>
+
+        <p className={styles.cardPrice}>${motorcycle.price.toLocaleString()}</p>
+      </div>
+    </article>
   );
 }
