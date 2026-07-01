@@ -30,11 +30,6 @@ export default function Store() {
     loadCategories();
   }, []);
 
-  function handleClick() {
-    //God Help me
-    return;
-  }
-
   return (
     <div className={styles.storeContainer}>
       <header className={styles.storeHeader}>
@@ -80,11 +75,7 @@ export default function Store() {
 
       <section className={styles.bikeGrid}>
         {motorcycles.map((motorcycle) => (
-          <Card
-            key={motorcycle.slug}
-            motorcycle={motorcycle}
-            onClick={handleClick}
-          />
+          <Card key={motorcycle.slug} motorcycle={motorcycle} />
         ))}
       </section>
     </div>
