@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 export default function DetailsPage() {
   return (
     <>
-      <Navbar />
+      <Navbar variant="light" />
 
       <Details />
     </>
