@@ -1,11 +1,15 @@
-import heroBackground from "../assets/hero_background.jpg";
+import styles from "../styles/Hero.module.css";
 
 export default function Hero() {
   return (
-    <>
-      <img className="hero-background-img" src={heroBackground} alt="" />
-      <p className="hero-quote">Ignite your journey with Honda</p>
-      <button className="btn explore-btn">{`[Explore Collection]`}</button>
-    </>
+    <section className={styles.hero}>
+      <div className={styles.overlay}></div>
+
+      <div className={styles.content}>
+        <p className={styles.heroQuote}>Ignite your journey with Honda</p>
+
+        <button className={styles.exploreBtn}>Explore Collection</button>
+      </div>
+    </section>
   );
 }
