@@ -27,7 +27,7 @@
 }
 
 .light {
-  position: fixed;
+  position: absolute;
 
   top: 0;
 
