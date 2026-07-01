@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 
 import Layout from "../layouts/Layout";
 import LandingPage from "../pages/LandingPage";
+import DetailsPage from "../pages/DetailsPage";
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <LandingPage />,
+      },
+      {
+        path: "/:slug",
+        element: <DetailsPage />,
       },
     ],
   },
