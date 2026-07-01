@@ -67,6 +67,13 @@
   font-size: 24px;
 }
 
+.navButton {
+  all: unset;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+}
+
 .transparent .navLinks a,
 .transparent .navLinks {
   color: white;

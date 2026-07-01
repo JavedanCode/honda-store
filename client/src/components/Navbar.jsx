@@ -1,8 +1,20 @@
 import hondaLogo from "../assets/Honda_Logo.svg";
-import { Link } from "react-router-dom";
 import styles from "../styles/Navbar.module.css";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function Navbar({ variant = "transparent" }) {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  function handleStoreClick() {
+    if (location.pathname === "/") {
+      document.getElementById("store")?.scrollIntoView({
+        behavior: "smooth",
+      });
+    } else {
+      navigate("/", { state: { scrollToStore: true } });
+    }
+  }
   return (
     <>
       <header
@@ -23,7 +35,9 @@ export default function Navbar({ variant = "transparent" }) {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="store">Store</a>
+              <button className={styles.navButton} onClick={handleStoreClick}>
+                Store
+              </button>
             </li>
             <li>
               <Link to="/about">About</Link>

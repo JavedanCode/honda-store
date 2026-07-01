@@ -31,7 +31,7 @@ export default function Store() {
   }, []);
 
   return (
-    <div className={styles.storeContainer}>
+    <section id="store" className={styles.storeContainer}>
       <header className={styles.storeHeader}>
         <h2 className={styles.storeHeading}>Current Offers</h2>
 
@@ -78,6 +78,6 @@ export default function Store() {
           <Card key={motorcycle.slug} motorcycle={motorcycle} />
         ))}
       </section>
-    </div>
+    </section>
   );
 }
