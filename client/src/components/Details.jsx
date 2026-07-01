@@ -88,53 +88,53 @@ export default function Details() {
         <h2>Technical Specifications</h2>
 
         <div className={styles.specGrid}>
-          <div className={styles.specCard}>
+          <div className={styles.specRow}>
             <span>Engine Type</span>
             <strong>{motorcycle.engineType}</strong>
           </div>
 
-          <div className={styles.specCard}>
+          <div className={styles.specRow}>
             <span>Displacement</span>
             <strong>{motorcycle.displacement} cc</strong>
           </div>
 
-          <div className={styles.specCard}>
+          <div className={styles.specRow}>
             <span>Horsepower</span>
             <strong>{motorcycle.horsepower} hp</strong>
           </div>
 
-          <div className={styles.specCard}>
+          <div className={styles.specRow}>
             <span>Torque</span>
             <strong>{motorcycle.torque} Nm</strong>
           </div>
 
-          <div className={styles.specCard}>
+          <div className={styles.specRow}>
             <span>Cooling</span>
             <strong>{motorcycle.cooling}</strong>
           </div>
 
-          <div className={styles.specCard}>
+          <div className={styles.specRow}>
             <span>Transmission</span>
             <strong>{motorcycle.transmission}</strong>
           </div>
 
-          <div className={styles.specCard}>
+          <div className={styles.specRow}>
             <span>Weight</span>
             <strong>{motorcycle.weight} kg</strong>
           </div>
 
-          <div className={styles.specCard}>
+          <div className={styles.specRow}>
             <span>Seat Height</span>
             <strong>{motorcycle.seatHeight} mm</strong>
           </div>
 
-          <div className={styles.specCard}>
+          <div className={styles.specRow}>
             <span>Fuel Capacity</span>
             <strong>{motorcycle.fuelCapacity} L</strong>
           </div>
 
           {motorcycle.topSpeed && (
-            <div className={styles.specCard}>
+            <div className={styles.specRow}>
               <span>Top Speed</span>
               <strong>{motorcycle.topSpeed} km/h</strong>
             </div>
