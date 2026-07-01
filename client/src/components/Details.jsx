@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getMotorcycle } from "../api/motorcycleApi";
+import styles from "../styles/Details.module.css";
 export default function Details() {
   const { slug } = useParams();
   const [motorcycle, setMotorcycle] = useState(null);
