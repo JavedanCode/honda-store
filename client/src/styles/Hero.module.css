@@ -13,6 +13,16 @@
   align-items: center;
 }
 
+.githubWrapper {
+  position: absolute;
+
+  right: 6rem;
+  top: 50%;
+
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
 .overlay {
   position: absolute;
   inset: 0;
@@ -58,4 +68,7 @@
 .exploreBtn:hover {
   background: white;
   color: black;
+
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.25);
 }

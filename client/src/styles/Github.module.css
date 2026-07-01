@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+.githubCard {
+  width: 280px;
+
+  padding: 1.8rem;
+
+  border-radius: 18px;
+
+  background: linear-gradient(
+    160deg,
+    rgba(25, 25, 25, 0.72),
+    rgba(35, 35, 35, 0.45)
+  );
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  color: white;
+
+  font-family: "Inter", sans-serif;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.githubTitle {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  opacity: 0.75;
+}
+
+.githubName {
+  margin-top: 1.25rem;
+
+  font-size: 2rem;
+  font-weight: 700;
+
+  line-height: 1.1;
+}
+
+.githubDescription {
+  margin-top: 0.75rem;
+
+  font-size: 0.95rem;
+  line-height: 1.7;
+
+  opacity: 0.85;
+}
+
+.githubAccent {
+  width: 50px;
+  height: 4px;
+
+  margin: 1.5rem 0;
+
+  border-radius: 99px;
+
+  background: #e40521;
+}
+
+.githubLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: gap 0.3s ease;
+}
+
+.githubLink:hover {
+  gap: 1rem;
+}
+
+.githubCard:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.githubLogo {
+  width: 70px;
+
+  filter: invert(1);
+
+  transition:
+    transform 0.35s ease,
+    rotate 0.35s ease;
+}
+
+.githubCard:hover .githubLogo {
+  filter: invert(0);
+  transform: rotate(-10deg) scale(1.1);
+}
+.githubCard:hover .githubAccent {
+  width: 90px;
+  transition: width 0.35s ease;
+}
+
+.githubCard {
+  animation: slideIn 0.8s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
