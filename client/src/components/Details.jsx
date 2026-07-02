@@ -9,6 +9,8 @@ export default function Details() {
   const navigate = useNavigate();
   const [motorcycle, setMotorcycle] = useState(null);
   const [quantity, setQuantity] = useState(1);
+
+  const IMAGE_URL = import.meta.env.VITE_IMAGE_URL;
   useEffect(() => {
     async function fetchMotorcycle() {
       const bike = await getMotorcycle(slug);
@@ -28,7 +30,7 @@ export default function Details() {
         {/* Left */}
         <div className={styles.imageContainer}>
           <img
-            src={`http://localhost:3000${motorcycle.imagePath}`}
+            src={`${IMAGE_URL}${motorcycle.imagePath}`}
             alt={motorcycle.name}
             className={styles.bikeImage}
           />
