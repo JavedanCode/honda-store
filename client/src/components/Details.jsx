@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { getMotorcycle } from "../api/motorcycleApi";
 import { useCart } from "../context/CartContext";
 import styles from "../styles/Details.module.css";
 export default function Details() {
   const { addToCart } = useCart();
   const { slug } = useParams();
+  const navigate = useNavigate();
   const [motorcycle, setMotorcycle] = useState(null);
   const [quantity, setQuantity] = useState(1);
   useEffect(() => {
@@ -95,7 +96,15 @@ export default function Details() {
               Add to Cart
             </button>
 
-            <button className={styles.buyNow}>Buy Now</button>
+            <button
+              className={styles.buyNow}
+              onClick={() => {
+                addToCart(motorcycle, 1);
+                navigate("/cart");
+              }}
+            >
+              Buy Now
+            </button>
           </div>
         </aside>
       </section>
