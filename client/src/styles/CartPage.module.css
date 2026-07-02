@@ -1,6 +1,7 @@
 .cartPage {
   width: min(1400px, 90%);
   margin: 4rem auto;
+  margin-top: 11rem;
 
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -21,6 +22,7 @@
 }
 
 .emptyCart {
+  margin-top: 6rem;
   min-height: 70vh;
 
   display: flex;
