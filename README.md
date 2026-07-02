@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🏍️ Honda Store
+# Honda Store
 
 ### A modern full-stack motorcycle store inspired by Honda's official website.
 
@@ -30,11 +30,11 @@ Built with **React**, **Express**, **PostgreSQL**, and **Prisma**.
 
 | Landing Page                 | Details Page                 |
 | ---------------------------- | ---------------------------- |
-| ![](screenshots/landing.png) | ![](screenshots/details.png) |
+| <img width="1900" height="789" alt="image" src="https://github.com/user-attachments/assets/7bd17f9e-73ff-4ed7-8bca-f468df5e1e63" /> | <img width="1897" height="873" alt="image" src="https://github.com/user-attachments/assets/9fd84d99-e175-4d2b-b954-fef038fdf1c9" /> |
 
-| Cart                      | About                      |
+| Cart                      | Store                      |
 | ------------------------- | -------------------------- |
-| ![](screenshots/cart.png) | ![](screenshots/about.png) |
+| <img width="1902" height="875" alt="image" src="https://github.com/user-attachments/assets/5eba6561-6d8d-43bc-81bc-ec8b990447b9" /> | <img width="1900" height="872" alt="image" src="https://github.com/user-attachments/assets/826247d4-4997-4c2d-9f8c-34c344ecadc7" /> |
 
 ---
 
@@ -177,36 +177,6 @@ GET /api/motorcycles/cb650r
 ```http
 GET /api/motorcycles/categories
 ```
-
----
-
-# Project Structure
-
-```text
-honda-store
-│
-├── client
-│   ├── src
-│   │   ├── api
-│   │   ├── assets
-│   │   ├── components
-│   │   ├── context
-│   │   ├── layouts
-│   │   ├── pages
-│   │   ├── router
-│   │   └── styles
-│
-├── server
-│   ├── prisma
-│   ├── routes
-│   ├── controllers
-│   ├── services
-│   └── src
-│
-└── README.md
-```
-
----
 
 # Installation
 
