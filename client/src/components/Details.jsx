@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getMotorcycle } from "../api/motorcycleApi";
+import { useCart } from "../context/CartContext";
 import styles from "../styles/Details.module.css";
 export default function Details() {
+  const { addToCart } = useCart();
   const { slug } = useParams();
   const [motorcycle, setMotorcycle] = useState(null);
+  const [quantity, setQuantity] = useState(1);
   useEffect(() => {
     async function fetchMotorcycle() {
       const bike = await getMotorcycle(slug);
@@ -68,16 +71,29 @@ export default function Details() {
             <label>Quantity</label>
 
             <div className={styles.quantitySelector}>
-              <button>-</button>
+              <button onClick={() => setQuantity((q) => Math.max(1, q - 1))}>
+                -
+              </button>
 
-              <span>1</span>
+              <span>{quantity}</span>
 
-              <button>+</button>
+              <button
+                onClick={() =>
+                  setQuantity((q) => Math.min(motorcycle.stock, q + 1))
+                }
+              >
+                +
+              </button>
             </div>
           </div>
 
           <div className={styles.actions}>
-            <button className={styles.addToCart}>Add to Cart</button>
+            <button
+              className={styles.addToCart}
+              onClick={() => addToCart(motorcycle, quantity)}
+            >
+              Add to Cart
+            </button>
 
             <button className={styles.buyNow}>Buy Now</button>
           </div>

@@ -1,8 +1,10 @@
 import hondaLogo from "../assets/Honda_Logo.svg";
 import styles from "../styles/Navbar.module.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 
 export default function Navbar({ variant = "transparent" }) {
+  const { totalItems } = useCart();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -43,7 +45,7 @@ export default function Navbar({ variant = "transparent" }) {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/cart">Cart</Link>
+              <Link to="/cart">Cart {totalItems}</Link>
             </li>
           </ul>
         </nav>
