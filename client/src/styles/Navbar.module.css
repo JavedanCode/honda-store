@@ -128,34 +128,28 @@
 }
 
 .cartLink {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.3rem;
-
-  text-decoration: none;
-
   position: relative;
 }
 
 .cartBadge {
-  min-width: 24px;
-  height: 24px;
+  position: absolute;
+
+  top: 4px;
+  right: -29px;
+
+  min-width: 22px;
+  height: 22px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  padding: 0 0.45rem;
+  border-radius: 50%;
 
   background: var(--color-primary);
 
   color: white;
 
-  border-radius: 999px;
-
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
-
-  line-height: 1;
 }
