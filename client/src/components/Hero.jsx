@@ -12,7 +12,16 @@ export default function Hero() {
       <div className={styles.content}>
         <p className={styles.heroQuote}>Ignite your journey with Honda</p>
 
-        <button className={styles.exploreBtn}>Explore Collection</button>
+        <button
+          className={styles.exploreBtn}
+          onClick={() =>
+            document.getElementById("store")?.scrollIntoView({
+              behavior: "smooth",
+            })
+          }
+        >
+          Explore Collection
+        </button>
       </div>
 
       <div className={styles.githubWrapper}>
