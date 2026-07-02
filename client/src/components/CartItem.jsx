@@ -2,7 +2,7 @@ import styles from "../styles/CartItem.module.css";
 import { useCart } from "../context/CartContext";
 
 export default function CartItem({ item }) {
-  const API_URL = import.meta.env.VITE_API_URL;
+  const IMAGE_URL = import.meta.env.VITE_IMAGE_URL;
   const { removeFromCart, updateQuantity } = useCart();
 
   const { motorcycle, quantity } = item;
@@ -10,7 +10,7 @@ export default function CartItem({ item }) {
   return (
     <article className={styles.card}>
       <img
-        src={`${API_URL}${motorcycle.imagePath}`}
+        src={`${IMAGE_URL}${motorcycle.imagePath}`}
         alt={motorcycle.name}
         className={styles.image}
       />
