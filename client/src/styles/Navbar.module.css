@@ -126,3 +126,36 @@
 .navLinks a:visited {
   color: inherit;
 }
+
+.cartLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+
+  text-decoration: none;
+
+  position: relative;
+}
+
+.cartBadge {
+  min-width: 24px;
+  height: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 0.45rem;
+
+  background: var(--color-primary);
+
+  color: white;
+
+  border-radius: 999px;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  line-height: 1;
+}

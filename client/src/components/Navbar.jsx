@@ -45,7 +45,13 @@ export default function Navbar({ variant = "transparent" }) {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/cart">Cart {totalItems}</Link>
+              <Link to="/cart" className={styles.cartLink}>
+                <span>Cart</span>
+
+                {totalItems > 0 && (
+                  <span className={styles.cartBadge}>{totalItems}</span>
+                )}
+              </Link>
             </li>
           </ul>
         </nav>
