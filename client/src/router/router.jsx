@@ -18,6 +18,10 @@ const router = createBrowserRouter([
         path: "bike/:slug",
         element: <DetailsPage />,
       },
+      {
+        path: "cart",
+        element: <CartPage />,
+      },
     ],
   },
 ]);
