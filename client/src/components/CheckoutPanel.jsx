@@ -24,9 +24,7 @@ export default function CheckoutPanel() {
   function handleCheckout(e) {
     e.preventDefault();
 
-    alert(
-      `Thank you for your purchase!\n\nThis is a demo website, so no payment has been processed.`,
-    );
+    toast.success("Thank you! Your order has been placed.");
 
     clearCart();
   }

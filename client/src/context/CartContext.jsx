@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import toast from "react-hot-toast";
 
 const CartContext = createContext();
 
@@ -22,12 +23,15 @@ export function CartProvider({ children }) {
         quantity,
       },
     ]);
+
+    toast.success(`${motorcycle.name} added to cart.`);
   }
 
   function removeFromCart(slug) {
     setCartItems((currentItems) =>
       currentItems.filter((item) => item.motorcycle.slug !== slug),
     );
+    toast(`${removedItem.motorcycle.name} removed.`);
   }
 
   function updateQuantity(slug, quantity) {
